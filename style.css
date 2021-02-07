@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar-brand img {
+    width: 100px;
+}
+
+.nav-link {
+    display: inline;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.menubar {
+    flex: 50%;
+}
+
+.nav-item {
+    float: right;
+
+    font-weight: bold;
+    list-style: none;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon {
+    margin-right: -35px;
+    color: gray;
+    z-index: 1;
+}
+
+.search-field {
+    width: 250px;
+    height: 40px;
+    padding: 0px 40px;
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.search-btn {
+    margin-left: -5px;
+    width: 80px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 0px 5px 5px 0px;
+    background-color: #F06C4E;
+    color: white;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+    background-color: gray;
+}
+
+#searchResult {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+
+.item {
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #F8F7F5;
+    border-radius: 2%;
+
+}
+
+.card-img-top {
+    width: 100%;
+    border-top-right-radius: 2%;
+    border-top-left-radius: 2%;
+}
+
+.card-body {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.card-text {
+    font-size: 17px
+}
+
+.food-item {
+    width: 80%;
+    height: 350px;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.food-item img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.single-food {
+    width: 500px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.single-food img {
+    width: 100%;
+    height: 400px;
+}
+
+.single-food h3 {
+    padding: 20px;
+    font-weight: bolder;
+}
+
+.single-food-second-div {
+    padding: 10px 30px;
+}
+
+.single-food-second-div {
+    padding: 0px 25px;
+}
+
+.single-food-second-div ul {
+    list-style: none;
+    padding: 0;
+}
+
+.single-food-second-div li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5px 0px;
+    color: gray;
+}
+
+.single-food-second-div i {
+    color: #3b2d64;
+    padding-right: 5px;
+}

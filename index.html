@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Hungry Monster</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<!-- Custom css -->
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="container">
+				<a class="navbar-brand" href="#"><img src="./logo/logo.png" alt="" /></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class=menubar>
+					<ul class="nav-item">
+						<li class="nav-link">Home</li>
+						<li class="nav-link">About</li>
+						<li class="nav-link">Recipes</li>
+						<li class="nav-link">Blog</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main class="content-area">
+		<div class="search-bar col-lg-6 mx-auto">
+			<div class="search-box">
+				<i class="material-icons search-icon">search</i>
+				<input id="search-field" class="search-field" type="text" id="search-input"
+					placeholder="Search for meal" autocomplete="off" />
+				<button id="searchBtn" class="search-btn">Search</button>
+			</div>
+		</div>
+		<!--Search Result -->
+		<div id="searchResult" class="search-result d-flex flex-wrap"></div>
+
+		<!--food card -->
+		<div id="singleFoodDetails" class="single-foods text-center"></div>
+	</main>
+
+	<!-- JavaScript link -->
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+	</script>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
