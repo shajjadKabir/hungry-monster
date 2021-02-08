@@ -1,35 +1,21 @@
 const searchInput = document.querySelector(".search-box input");
 const searchBtn = document.getElementById("searchBtn");
-searchBtn.addEventListener("click", getSearchResult);
-searchInput.addEventListener("keyup", (e) => {
-    if (e.key === "Enter") {
-        if (!searchInput.value) {
-            alert("Please write a valid food name");
-        }
-    }
-    if (searchInput.value) {
-        getSearchResult();
-    } else {
-        searchResult.innerHTML = "";
-    }
-});
-
 
 const singleFoodDetails = document.getElementById("singleFoodDetails");
 const searchResult = document.getElementById("searchResult");
 
-function getSearchResult() {
+const getSearchResult = () => {
     const foodTitle = searchInput.value;
-    const API = `https://www.themealdb.com/api/json/v1/1/search.php?s=${foodTitle}`;
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${foodTitle}`;
     if (foodTitle) {
-        fetch(API)
+        fetch(url)
             .then((res) => res.json())
             .then((data) => {
                 if (data.meals) {
                     searchResult.innerHTML = "";
                     data.meals.forEach(meal => {
                         searchResult.innerHTML += `
-                        <div class="item col-md-3" data-id="${meal.idMeal}">
+                        <div class="item col-md-3 my-2" data-id="${meal.idMeal}">
                         <div class=" card text-center" onclick="getFood(${meal.idMeal})" class = 'food-item'>
                             <img src="${meal.strMealThumb}" data-id="${meal.idMeal}" class="card-img-top">
                             <div class="card-body " data-id="${meal.idMeal}" >
@@ -51,6 +37,20 @@ function getSearchResult() {
     }
 }
 
+
+searchBtn.addEventListener("click", getSearchResult);
+searchInput.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") {
+        if (!searchInput.value) {
+            alert("Please write a valid food name");
+        }
+    }
+    if (searchInput.value) {
+        getSearchResult();
+    } else {
+        searchResult.innerHTML = "";
+    }
+});
 
 const getFood = mealID => {
     document.getElementById('searchResult').style.display = 'none';
@@ -82,4 +82,3 @@ const getFood = mealID => {
 
         })
 }
-
